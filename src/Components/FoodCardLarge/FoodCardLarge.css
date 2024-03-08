@@ -1,0 +1,37 @@
+.fcl-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 4vw;
+  box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.25);
+  border-radius: 1rem;
+  margin: 4vw 4vw;
+}
+
+.fcl-infos h2 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.fcl-image img {
+  display: flex;
+  align-items: center;
+  width: 20vw;
+}
+
+.fcl-infos p {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  color: rgb(167, 167, 167);
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.fcl-btn {
+  display: flex;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  border-radius: 0.3rem;
+  padding: 0.1vw 0.1vw;
+}
