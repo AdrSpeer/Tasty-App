@@ -1,0 +1,51 @@
+.landing-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  background-color: #70b9be;
+}
+
+.landing-food {
+  margin-top: 10vh;
+}
+
+.landing-box {
+  position: absolute;
+  background-color: white;
+  margin-top: 5vh;
+  border-radius: 5vw 5vw 0vw 0vw;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 35vh;
+}
+
+.landing-title {
+  margin-top: 4vh;
+  font-weight: 700;
+}
+
+.landing-text {
+  width: 60vw;
+  margin: auto;
+  margin-top: 3vh;
+  color: rgb(167, 167, 167);
+}
+
+.landing-btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  width: 70vw;
+  height: 6vh;
+  margin-top: 5vh;
+  border-radius: 1rem;
+  background-color: #042628;
+  color: white;
+}
+
+.landing-btn a {
+  color: white;
+}
