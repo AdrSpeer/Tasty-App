@@ -1,6 +1,11 @@
+import IngredientsInstruction from "../../Components/IngredientsInstruction/IngredientsInstruction";
 import "./Details.css";
 const Details = () => {
-  return <></>;
+  return (
+    <>
+      <IngredientsInstruction />
+    </>
+  );
 };
 
 export default Details;
