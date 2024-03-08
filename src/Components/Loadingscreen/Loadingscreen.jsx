@@ -1,7 +1,6 @@
 import "./Loadingscreen.css";
 import { useContext, useEffect } from "react";
 import { LoadingContext } from './../../Context/Context';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
 
 const Loadingscreen = () => {
     const { loading, setLoading } = useContext(LoadingContext);
