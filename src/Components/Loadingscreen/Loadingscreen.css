@@ -17,7 +17,7 @@
   width: 10rem;
   height: 0.8rem;
   background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
-  animation: l1 0.5s infinite linear;
+  animation: l1 1s infinite linear;
 }
 
 @keyframes l1 {
