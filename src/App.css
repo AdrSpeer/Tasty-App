@@ -4,3 +4,10 @@
   box-sizing: border-box;
   font-family: "Inter Variable";
 }
+
+:root {
+  --title: #042628;
+  --text: rgb(167, 167, 167);
+  --btn: #042628;
+  --bg: #70b9be;
+}

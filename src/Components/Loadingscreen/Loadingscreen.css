@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #70b9be;
+  background-color: var(--bg);
 }
 
 .loading-title {

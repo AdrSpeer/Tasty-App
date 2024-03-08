@@ -4,7 +4,7 @@
   flex-direction: column;
   text-align: center;
   height: 100vh;
-  background-color: #70b9be;
+  background-color: var(--bg);
 }
 
 .landing-food {
@@ -31,7 +31,7 @@
   width: 60vw;
   margin: auto;
   margin-top: 3vh;
-  color: rgb(167, 167, 167);
+  color: var(--text);
 }
 
 .landing-btn {
@@ -42,7 +42,7 @@
   height: 6vh;
   margin-top: 5vh;
   border-radius: 1rem;
-  background-color: #042628;
+  background-color: var(--btn);
   color: white;
 }
 

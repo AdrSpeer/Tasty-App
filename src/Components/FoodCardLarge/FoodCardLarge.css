@@ -9,8 +9,10 @@
 }
 
 .fcl-infos h2 {
+  color: var(--title);
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 0.5vh;
 }
 
 .fcl-image img {
@@ -23,15 +25,15 @@
   display: flex;
   align-items: center;
   gap: 3vw;
-  color: rgb(167, 167, 167);
-  font-weight: 300;
+  color: var(--text);
+  font-weight: 400;
   font-size: 0.8rem;
 }
 
 .fcl-btn {
   display: flex;
   align-items: center;
-  background-color: rgb(20, 20, 20);
+  background-color: var(--btn);
   border-radius: 0.3rem;
   padding: 0.1vw 0.1vw;
 }
