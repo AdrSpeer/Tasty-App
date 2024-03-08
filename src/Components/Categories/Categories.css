@@ -1,0 +1,21 @@
+.cat-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.cat-card {
+  width: 300px;
+}
