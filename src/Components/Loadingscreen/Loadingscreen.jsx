@@ -14,7 +14,7 @@ const Loadingscreen = () => {
   
     return (
       <section className="loading-bg">
-        <p>TASTY</p>
+        <p className="loading-title">TASTY</p>
         <div className="loader"></div>
       </section>
     );
