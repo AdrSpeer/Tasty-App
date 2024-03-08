@@ -1,5 +1,6 @@
 // meal of the day =   motd
 // <MealOfTheDay MealTitle="Full English Breakfast" TagText="Breakfast" AreasText="British" />
+import CircleIcon from "@mui/icons-material/Circle";
 import "./MealOfTheDay.css";
 const MealOfTheDay = (props) => {
   return (
@@ -11,7 +12,7 @@ const MealOfTheDay = (props) => {
             <h2>{props.MealTitle}</h2>
             <div className="motd-flex">
               <div className="motd-tag-container">
-                <div className="motd-tag"></div>
+                <CircleIcon style={{ color: "#C4C4C4" }} />
                 <p>{props.TagText}</p>
               </div>
               <p>{props.AreasText}</p>

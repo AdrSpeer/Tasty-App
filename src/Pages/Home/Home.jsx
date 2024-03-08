@@ -7,13 +7,9 @@ const Home = () => {
   return (
     <>
       <Searchbar />
-      <MealOfTheDay
-        MealTitle="Full English Breakfast"
-        TagText="Breakfast"
-        AreasText="British"
-      />
+      <MealOfTheDay MealTitle="Full English Breakfast" TagText="Breakfast" AreasText="British" />
       <Areas />
-      <Categories />
+      <Categories ImgURL="https://picsum.photos/500/300/" Category="Beef" />
     </>
   );
 };
