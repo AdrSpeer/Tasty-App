@@ -3,7 +3,7 @@ import MealOfTheDay from "../../Components/MealOfTheDay/MealOfTheDay";
 const Home = () => {
   return (
     <>
-      <MealOfTheDay />
+      <MealOfTheDay MealTitle="Full English Breakfast" TagText="Breakfast" AreasText="British" />
     </>
   );
 };

@@ -1,13 +1,23 @@
+// meal of the day =   motd
+// <MealOfTheDay MealTitle="Full English Breakfast" TagText="Breakfast" AreasText="British" />
 import "./MealOfTheDay.css";
-const MealOfTheDay = () => {
+const MealOfTheDay = (props) => {
   return (
     <>
-      <section className="meal-of-the-day-section">
+      <section className="motd-section">
         <h2>Meal of the Day</h2>
-        <div className="meal-of-the-day-card">
-          <span>Full English Breakfast</span>
-          <div className="meal-of-the-day-flex"></div>
-        </div>
+        <article className="motd-card">
+          <div>
+            <h2>{props.MealTitle}</h2>
+            <div className="motd-flex">
+              <div className="motd-tag-container">
+                <div className="motd-tag"></div>
+                <p>{props.TagText}</p>
+              </div>
+              <p>{props.AreasText}</p>
+            </div>
+          </div>
+        </article>
       </section>
     </>
   );
