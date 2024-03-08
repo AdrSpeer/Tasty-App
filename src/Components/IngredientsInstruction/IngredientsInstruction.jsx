@@ -9,6 +9,16 @@ const IngredientsInstruction = () => {
         <h3>Beakfast</h3>
         {/* Name: "strArea" aus Fetch fehlt */}
         <h4>British</h4>
+        <div className="ButtonCluster">
+          <button>Ingredients</button>
+          <button>Instructions</button>
+        </div>
+        <h5>Ingredients</h5>
+        <p>3/4 cup Tortilla Chips</p>
+        <p>1/2 cup Avocado</p>
+        <p>2 Red Cabbage</p>
+        <p>2 Teaspoons Peanuts</p>
+        <p>1 Red Onions</p>
       </div>
     </section>
   );
