@@ -1,6 +1,11 @@
 import "./Home.css";
+import MealOfTheDay from "../../Components/MealOfTheDay/MealOfTheDay";
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <MealOfTheDay />
+    </>
+  );
 };
 
 export default Home;
