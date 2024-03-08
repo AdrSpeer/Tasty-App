@@ -1,4 +1,5 @@
 import "./Landingpage.css";
+
 const Landingpage = () => {
     return (
         <>
