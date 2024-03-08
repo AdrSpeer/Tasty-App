@@ -13,8 +13,9 @@ const Loadingscreen = () => {
   
     return (
       <section>
-        <p>SEITE WIRD GELADEN</p>
-        <div class="loader"></div>
+        <img src="" alt="TASTY LOGO" />
+        <p>TASTY</p>
+        <div className="loader"></div>
       </section>
     );
   };
