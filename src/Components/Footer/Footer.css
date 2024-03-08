@@ -1,0 +1,11 @@
+.footer-box {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5vw 0;
+  border-radius: 5vw 5vw 0vw 0vw;
+}
