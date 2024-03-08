@@ -1,0 +1,22 @@
+body {
+  background-color: #70b9be;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loader {
+  width: 10rem;
+  height: 1rem;
+  background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+  animation: l1 3s infinite linear;
+  border-radius: 0.5rem;
+}
+@keyframes l1 {
+  100% {
+    background-size: 100%;
+  }
+}

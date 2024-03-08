@@ -1,6 +1,7 @@
 import "./Loadingscreen.css";
 import { useContext, useEffect } from "react";
 import { LoadingContext } from './../../Context/Context';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
 
 const Loadingscreen = () => {
     const { loading, setLoading } = useContext(LoadingContext);
@@ -12,8 +13,7 @@ const Loadingscreen = () => {
     }, []);
   
     return (
-      <section>
-        <img src="" alt="TASTY LOGO" />
+      <section className="loading-bg">
         <p>TASTY</p>
         <div className="loader"></div>
       </section>
