@@ -1,0 +1,9 @@
+.areas-section {
+  padding-bottom: 2vh;
+}
+
+.areas-title-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

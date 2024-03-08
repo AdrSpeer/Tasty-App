@@ -1,3 +1,7 @@
+.motd-section {
+  padding-bottom: 2vh;
+}
+
 .motd-card {
   background-image: url(../../../public/MealOfTheDay.svg);
   background-position: center;
