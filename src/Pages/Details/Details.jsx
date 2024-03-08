@@ -1,9 +1,6 @@
 import "./Details.css";
 const Details = () => {
-    return (
-        <>
-        </>
-    );
-}
- 
+  return <></>;
+};
+
 export default Details;
