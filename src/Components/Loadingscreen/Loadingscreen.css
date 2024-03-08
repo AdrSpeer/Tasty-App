@@ -8,6 +8,7 @@
 }
 
 .loading-title {
+  color: white;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -16,7 +17,7 @@
   margin-top: 2vh;
   width: 10rem;
   height: 0.8rem;
-  background: linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+  background: linear-gradient(#ffffff 0 0) 0/0% no-repeat #b6b6b6;
   animation: l1 1s infinite linear;
 }
 
