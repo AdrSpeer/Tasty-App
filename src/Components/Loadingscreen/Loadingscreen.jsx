@@ -8,7 +8,7 @@ const Loadingscreen = () => {
     useEffect(() => {
       setTimeout(() => {
         setLoading(true);
-      }, 3000);
+      }, 500);
     }, []);
   
     return (
