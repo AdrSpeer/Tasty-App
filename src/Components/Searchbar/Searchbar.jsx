@@ -10,14 +10,15 @@ const Searchbar = () => {
   const [searchData, setSearchData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
+  // ! Search All Meals
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
       .then((res) => res.json())
       .then((data) => setSearchData(data))
       .catch((err) => console.log("Fehler beim Laden der API", err));
   }, [searchInput]);
-
   console.log(searchData);
+
   return (
     <section className="searchbar">
       <div className="searchbar-box">
