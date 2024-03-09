@@ -1,3 +1,4 @@
+import SearchbarThree from "../SearchbarThree/SearchbarThree";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Areas.css";
 
@@ -7,6 +8,7 @@ const Areas = () => {
       <section className="areas-section">
         <div className="areas-title-flex">
           <h2>Areas</h2>
+          <SearchbarThree />
           <SeeAll />
         </div>
         <div className="areas-filter-buttons">

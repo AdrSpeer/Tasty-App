@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 const SearchbarTwo = () => {
   const [placeholderVisible, setPlaceholderVisible] = useState(true);
+
   const handleFocus = () => {
     setPlaceholderVisible(false);
   };
@@ -10,14 +11,18 @@ const SearchbarTwo = () => {
   const [searchInput, setSearchInput] = useState("");
 
   // ! Search Category
-
   useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInput}`)
-      .then((res) => res.json())
-      .then((data) => setSearchData(data))
-      .catch((err) => console.log("Fehler beim Laden der API", err));
+    if (searchInput) {
+      fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInput}`
+      )
+        .then((res) => res.json())
+        .then((data) => setSearchData(data.meals))
+        .catch((err) => console.log("Fehler beim Laden der API", err));
+    } else {
+      setSearchData([]);
+    }
   }, [searchInput]);
-
   console.log(searchData);
   return (
     <section className="searchbar">
@@ -32,6 +37,13 @@ const SearchbarTwo = () => {
           placeholder={placeholderVisible ? "Search" : ""}
         />
       </div>
+      {searchData &&
+        searchData.length > 0 &&
+        searchData.slice(0, 5).map((meal) => (
+          <div className="suggestions" key={meal.idMeal}>
+            <p>{meal.strMeal}</p>
+          </div>
+        ))}
     </section>
   );
 };
