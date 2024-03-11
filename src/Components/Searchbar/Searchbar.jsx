@@ -43,7 +43,7 @@ const Searchbar = () => {
             searchData
               .slice(0, 5)
               .map((meal) => (
-                <Link to={`/detail/${meal.idMeal}`}>{meal.strMeal}</Link>
+                <Link to={`/details/${meal.idMeal}`}>{meal.strMeal}</Link>
               ))}
         </div>
       </div>
