@@ -22,6 +22,8 @@ function App() {
             <Route path='/home' element={<Home/>}/>
             <Route path='/search' element={<Search/>}/>
             <Route path='/details/:id' element={<Details/>}/>
+            <Route path='/search/areas/:areas' element={<Search/>}/>
+            <Route path='/search/categories/:categories' element={<Search/>}/>
           </Routes>
         </BrowserRouter>
         ) : (
