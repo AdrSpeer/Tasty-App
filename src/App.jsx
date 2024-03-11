@@ -8,6 +8,8 @@ import "@fontsource-variable/inter";
 import { LoadingContext } from "./Context/Context";
 import { useState } from 'react';
 import Loadingscreen from './Components/Loadingscreen/Loadingscreen';
+import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
+import Area from './Pages/Area/Area';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -22,8 +24,8 @@ function App() {
             <Route path='/home' element={<Home/>}/>
             <Route path='/search' element={<Search/>}/>
             <Route path='/details/:id' element={<Details/>}/>
-            <Route path='/search/areas/:areas' element={<Search/>}/>
-            <Route path='/search/categories/:categories' element={<Search/>}/>
+            <Route path='/area/:areas' element={<Area/>}/>
+            <Route path='/categorie/:categories' element={<CategoriesPage/>}/>
           </Routes>
         </BrowserRouter>
         ) : (
