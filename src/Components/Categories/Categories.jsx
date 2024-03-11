@@ -15,7 +15,6 @@ const Categories = () => {
       .catch((error) => console.error("Fehler :-(", error));
   }, []);
 
-  console.log(category);
   return (
     <>
       <section className="cat-section">
@@ -27,7 +26,7 @@ const Categories = () => {
         <div className="cat-card-container">
           {category?.categories.length > 0 ? (
             category?.categories.map((item, index) => (
-              <div className="cat-card" key={index}>
+              <div key={index} className="cat-card">
                 <Link to={`/search/categories/${item.strCategory}`}>
                   <img src={item.strCategoryThumb} alt="category IMG" />
                   <p>{item.strCategory}</p>

@@ -23,8 +23,16 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  padding-bottom: 2vh;
+}
+
+h2 {
+  padding-bottom: 0.5vh;
+}
 .button-tags {
   font-size: var(--fontsize-regular);
+  font-weight: 300;
   border: none;
   border-radius: 1rem;
   background-color: var(--gray);

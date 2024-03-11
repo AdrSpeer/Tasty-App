@@ -14,16 +14,14 @@ const MealOfTheDay = () => {
       .catch((error) => console.error("Fehler :-(", error));
   }, []);
 
-  console.log(randomMeal);
-
   return (
     <>
       <section className="motd-section">
         {randomMeal?.meals.length > 0 ? (
           randomMeal?.meals.map((item, index) => (
             <>
+              <h2>Meal of the Day</h2>
               <Link to={`/details/${item.idMeal}`}>
-                <h2>Meal of the Day</h2>
                 <article key={index} className="motd-card">
                   <div>
                     <h2>{item.strMeal}</h2>

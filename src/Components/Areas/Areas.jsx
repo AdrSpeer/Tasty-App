@@ -12,7 +12,6 @@ const Areas = () => {
       .then((areaData) => setArea(areaData))
       .catch((error) => console.error("Fehler :-(", error));
   }, []);
-  console.log(area);
   return (
     <>
       <section className="areas-section">
