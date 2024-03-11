@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.cat-title-flex h2 {
+  margin-left: 5vw;
+}
+
 .cat-card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
