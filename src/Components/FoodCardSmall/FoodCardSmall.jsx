@@ -5,13 +5,13 @@ const FoodCardSmall = () => {
   const [areas, setAreas] = useState([]);
   const [categories, setCategories] = useState([]);
 
-  // useEffect(() => {
-  //   //   // Bei fetch nach "c=" noch den Button Value einfügen
-  //   //   fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef")
-  //   //   .then((res) => res.json())
-  //   //   .then((data) => setCategories(data))
-  //   //   .catch((err) => console.error("Fehler Bei FCS-Categories", err));
-  //   // }, []);
+  useEffect(() => {
+    // Bei fetch nach "c=" noch den Button Value einfügen
+    fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef")
+      .then((res) => res.json())
+      .then((data) => setCategories(data))
+      .catch((err) => console.error("Fehler Bei FCS-Categories", err));
+  }, []);
 
   useEffect(() => {
     // Bei fetch nach "a=" noch den Button Value einfügen
@@ -20,26 +20,28 @@ const FoodCardSmall = () => {
       .then((areaData) => setAreas(areaData.meals))
       .catch((err) => console.error("Fehler Bei FCS-Areas", err));
   }, []);
-  // console.log(categories);
-  console.log(areas);
 
   return (
-    <section className="fcs-container">
+    <div className="fcs-grid">
       {areas ? (
         areas.map((item, index) => (
-          <div key={index} className="areas">
-            <div className="fcs-image">
-              <img src={item.strMealThumb} alt="Food-Image" />
-            </div>
-            <div className="fcs-name">
-              <p>{item.strMeal}</p>
-            </div>
-          </div>
+          <Link to={`/details/${item.idMeal}`}>
+            <section key={index} className="fcs-container">
+              <div className="areas">
+                <div className="fcs-image">
+                  <img src={item.strMealThumb} alt="Food-Image" />
+                </div>
+                <div className="fcs-name">
+                  <p>{item.strMeal}</p>
+                </div>
+              </div>
+            </section>
+          </Link>
         ))
       ) : (
         <p>Loading...</p>
       )}
-    </section>
+    </div>
   );
 };
 
