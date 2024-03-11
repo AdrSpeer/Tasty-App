@@ -4,6 +4,7 @@ import "./Details.css";
 import { useParams } from "react-router-dom";
 const Details = () => {
   const [detailData, setDetailData] = useState([]);
+  const [showInstructions, setShowInstructions] = useState(false);
 
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -19,82 +20,31 @@ const Details = () => {
     <>
       {detailData ? (
         detailData.map((item, index) => (
-          <section className="DetailsFood">
+          <section className="DetailsFood" key = {index}>
             <div className="DetailsFoodContainer">
               <h2>{item.strMeal}</h2>
               <h3>{item.strCategory}</h3>
               <h4>{item.strArea}</h4>
+              {/* Hier habe ich deine Buttons gebaut, mit einem State. Damit habe ich den Switch gemacht und das Styling habe ich auch schon gemacht, kannst du noch anpassen wenn du willst.*/}
               <div className="ButtonCluster">
-                <button>Ingredients</button>
-                <button>Instructions</button>
+              <button className={`detail-btn ${showInstructions === false ? "active" : "" }`} onClick={() => setShowInstructions(false)}>Ingredients</button>
+              <button className={`detail-btn ${showInstructions === true ? "active" : "" }`} onClick={() => setShowInstructions(true)}>Instrucion</button>
               </div>
+              {showInstructions === false ? (
               <div className="ingredients">
                 <h5>Ingredients</h5>
-                <p>
-                  {item.strMeasure1} {item.strIngredient1}
-                </p>
-                <p>
-                  {item.strMeasure2} {item.strIngredient2}
-                </p>
-                <p>
-                  {item.strMeasure3} {item.strIngredient3}
-                </p>
-                <p>
-                  {item.strMeasure4} {item.strIngredient4}
-                </p>
-                <p>
-                  {item.strMeasure5} {item.strIngredient5}
-                </p>
-                <p>
-                  {item.strMeasure6} {item.strIngredient6}
-                </p>
-                <p>
-                  {item.strMeasure7} {item.strIngredient7}
-                </p>
-                <p>
-                  {item.strMeasure8} {item.strIngredient8}
-                </p>
-                <p>
-                  {item.strMeasure9} {item.strIngredient9}
-                </p>
-                <p>
-                  {item.strMeasure10} {item.strIngredient10}
-                </p>
-                <p>
-                  {item.strMeasure11} {item.strIngredient11}
-                </p>
-                <p>
-                  {item.strMeasure12} {item.strIngredient12}
-                </p>
-                <p>
-                  {item.strMeasure13} {item.strIngredient13}
-                </p>
-                <p>
-                  {item.strMeasure14} {item.strIngredient14}
-                </p>
-                <p>
-                  {item.strMeasure15} {item.strIngredient15}
-                </p>
-                <p>
-                  {item.strMeasure16} {item.strIngredient16}
-                </p>
-                <p>
-                  {item.strMeasure17} {item.strIngredient17}
-                </p>
-                <p>
-                  {item.strMeasure18} {item.strIngredient18}
-                </p>
-                <p>
-                  {item.strMeasure19} {item.strIngredient19}
-                </p>
-                <p>
-                  {item.strMeasure20} {item.strIngredient20}
-                </p>
-              </div>
+                {/* Kurzes Update vom Code, bisschen gecheatet aber dafür wesentlich weniger Zeilen, muss man nicht verstehen, kann man aber :D*/}
+                {/* Leeres Array mit 20 Elementen wird generiert, Wert ist irrelevant, nur index(key) ist wichtig, simuliert mehr oder weniger eine for Schleife, damit wir uns die tausend Zeilen unten sparen können. :D*/}
+                {[...Array(20)].map((_,index) => (
+                  <p key = {index}>
+                    {item["strMeasure" + index]} {item["strIngredient" + index]}
+                  </p>
+                ))}
+              </div> ) : (
               <div className="instructions">
                 <h5>Instructions</h5>
                 <p>{item.strInstructions}</p>
-              </div>
+              </div> )}
             </div>
           </section>
         ))

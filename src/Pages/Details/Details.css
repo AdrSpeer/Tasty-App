@@ -1,0 +1,29 @@
+.ButtonCluster {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(212, 212, 212);
+  width: 80vw;
+  text-align: center;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+.detail-btn {
+  border: none;
+  background-color: none;
+  background: none;
+  padding: 3vw 3vw;
+  margin: 1vw;
+  border-radius: 0.5rem;
+  color: black;
+  width: 35vw;
+}
+
+.detail-btn.active {
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  background-color: none;
+  width: 35vw;
+}

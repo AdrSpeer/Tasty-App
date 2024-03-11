@@ -15,14 +15,13 @@ const MealOfTheDay = () => {
   }, []);
 
   return (
-    <>
       <section className="motd-section">
         {randomMeal?.meals.length > 0 ? (
-          randomMeal?.meals.map((item, index) => (
-            <>
+          randomMeal?.meals.map((item, index) => ( // Das Map ist hier überflüssig, da sowieso nur ein Element im Array ist. randomMeal?.meals[0].strMeal z.B könnte hier verwendet werden.
+            <section key={index}>
               <h2>Meal of the Day</h2>
               <Link to={`/details/${item.idMeal}`}>
-                <article key={index} className="motd-card">
+                <article className="motd-card">
                   <div>
                     <h2>{item.strMeal}</h2>
                     <div className="motd-flex">
@@ -35,13 +34,12 @@ const MealOfTheDay = () => {
                   </div>
                 </article>
               </Link>
-            </>
+            </section>
           ))
         ) : (
           <p>Loading ...</p>
         )}
       </section>
-    </>
   );
 };
 
