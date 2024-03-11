@@ -1,15 +1,20 @@
 import "./Search.css";
 import FoodCardLarge from "./../../Components/FoodCardLarge/FoodCardLarge";
-import FoodCardSmall from "../../Components/FoodCardSmall/FoodCardSmall";
 import Footer from "../../Components/Footer/Footer";
-import Searchbar from "../../Components/Searchbar/Searchbar";
+import SearchbarTwo from "../../Components/SearchbarTwo/SearchbarTwo";
+import { useState } from "react";
 
 const Search = () => {
+
+  const [searchData, setSearchData] = useState([]);
+
   return (
     <>
-      <Searchbar />
-      <FoodCardLarge />
-      <FoodCardSmall />
+      <SearchbarTwo setSearchData={setSearchData}/>
+      {searchData?.map((foodcard, key) => (
+        <FoodCardLarge key={key} data={foodcard}/>
+      ))}
+      
       <Footer />
     </>
   );
