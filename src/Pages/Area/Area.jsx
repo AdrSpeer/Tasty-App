@@ -24,31 +24,37 @@ const Area = () => {
   return (
     <>
       <Searchbar />
-      <div className="cat-btn">
+      <div className="areas-filter-buttons">
         {mainAreaData?.meals ? (
           mainAreaData?.meals.map((item, index) => (
-            <div key={index}>
-              <Link to={`/area/${item.strArea}`}>
-                <button>{item.strArea}</button>
-              </Link>
-            </div>
+            <Link to={`/area/${item.strArea}`} key={index}>
+              <button className="button-tags">{item.strArea}</button>
+            </Link>
           ))
         ) : (
           <p>Loading ...</p>
         )}
       </div>
-      {area ? (
-        area.map((item, index) => (
-          <Link key={index} to={`/details/${item.idMeal}`}>
-            <div className="area-filter">
-              <img src={item.strMealThumb} alt="category IMG" />
-              <p>{item.strMeal}</p>
-            </div>
-          </Link>
-        ))
-      ) : (
-        <p>Loading ...</p>
-      )}
+      <div className="fcs-grid">
+        {area ? (
+          area.map((item, index) => (
+            <Link key={index} to={`/details/${item.idMeal}`}>
+              <section className="fcs-container">
+                <div className="areas">
+                  <div className="fcs-image">
+                    <img src={item.strMealThumb} alt="category IMG" />
+                  </div>
+                  <div className="fcs-name">
+                    <p>{item.strMeal}</p>
+                  </div>
+                </div>
+              </section>
+            </Link>
+          ))
+        ) : (
+          <p>Loading ...</p>
+        )}
+      </div>
     </>
   );
 };

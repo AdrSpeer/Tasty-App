@@ -92,6 +92,7 @@ const Details = () => {
                 </p>
               </div>
               <div className="instructions">
+                <h5>Instructions</h5>
                 <p>{item.strInstructions}</p>
               </div>
             </div>

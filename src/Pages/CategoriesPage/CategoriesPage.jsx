@@ -27,31 +27,37 @@ const CategoriesPage = () => {
     <>
       <Searchbar />
       <section className="categories-page">
-        <div className="cat-btn">
+        <div className="areas-filter-buttons">
           {mainCategoryData?.categories ? (
             mainCategoryData?.categories.map((item, index) => (
-              <div key={index}>
-                <Link to={`/categorie/${item.strCategory}`}>
-                  <button>{item.strCategory}</button>
-                </Link>
-              </div>
+              <Link to={`/categorie/${item.strCategory}`} key={index}>
+                <button className="button-tags">{item.strCategory}</button>
+              </Link>
             ))
           ) : (
             <p>Loading ...</p>
           )}
         </div>
-        {category ? (
-          category.map((item, index) => (
-            <Link key={index} to={`/details/${item.idMeal}`}>
-              <div className="cat-filter">
-                <img src={item.strMealThumb} alt="category IMG" />
-                <p>{item.strMeal}</p>
-              </div>
-            </Link>
-          ))
-        ) : (
-          <p>Loading ...</p>
-        )}
+        <div className="fcs-grid">
+          {category ? (
+            category.map((item, index) => (
+              <Link key={index} to={`/details/${item.idMeal}`}>
+                <section className="fcs-container">
+                  <div className="areas">
+                    <div className="fcs-image">
+                      <img src={item.strMealThumb} alt="category IMG" />
+                    </div>
+                    <div className="fcs-name">
+                      <p>{item.strMeal}</p>
+                    </div>
+                  </div>
+                </section>
+              </Link>
+            ))
+          ) : (
+            <p>Loading ...</p>
+          )}
+        </div>
       </section>
     </>
   );
