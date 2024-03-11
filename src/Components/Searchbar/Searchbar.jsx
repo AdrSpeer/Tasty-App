@@ -2,6 +2,7 @@ import "./Searchbar.css";
 import React, { useEffect, useState } from "react";
 
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 const Searchbar = () => {
   const [placeholderVisible, setPlaceholderVisible] = useState(true);
   const handleFocus = () => {
@@ -36,14 +37,16 @@ const Searchbar = () => {
           onFocus={handleFocus}
           placeholder={placeholderVisible ? "Search" : ""}
         />
+        <div className="suggestions">
+          {searchData &&
+            searchData.length > 0 &&
+            searchData
+              .slice(0, 5)
+              .map((meal) => (
+                <Link to={`/detail/${meal.idMeal}`}>{meal.strMeal}</Link>
+              ))}
+        </div>
       </div>
-      {searchData &&
-        searchData.length > 0 &&
-        searchData.slice(0, 5).map((meal) => (
-          <div className="suggestions" key={meal.idMeal}>
-            <p>{meal.strMeal}</p>
-          </div>
-        ))}
     </section>
   );
 };
