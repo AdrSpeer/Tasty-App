@@ -2,6 +2,11 @@
   padding-bottom: 2vh;
 }
 
+.motd-section h2 {
+  margin-left: 5vw;
+  margin-top: 3vh;
+}
+
 .motd-card {
   background-image: url(../../../public/MealOfTheDay.svg);
   background-position: center;
@@ -11,8 +16,10 @@
 
   display: flex;
   flex-direction: column;
-  width: 70vw;
+  width: 80vw;
   border-radius: 1rem;
+  margin-left: 5vw;
+  margin-top: 1vh;
 }
 
 .motd-card h2 {
