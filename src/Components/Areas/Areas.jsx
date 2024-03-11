@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Areas.css";
+import { Link } from "react-router-dom";
 
 const Areas = () => {
   const [area, setArea] = useState(null);
@@ -22,9 +23,9 @@ const Areas = () => {
         <div className="areas-filter-buttons">
           {area?.meals.length > 0 ? (
             area?.meals.map((item, index) => (
-              <button key={index} className="button-tags">
-                {item.strArea}
-              </button>
+              <Link key={index} to={`/area/${item.strArea}`}>
+                <button className="button-tags">{item.strArea}</button>{" "}
+              </Link>
             ))
           ) : (
             <p>Loading ...</p>
