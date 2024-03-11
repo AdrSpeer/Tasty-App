@@ -1,9 +1,20 @@
 // category = cat
 // <Categories ImgURL="https://picsum.photos/500/300/" Category="Beef" />
 import SearchbarTwo from "../SearchbarTwo/SearchbarTwo";
+import { useEffect, useState } from "react";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Categories.css";
-const Categories = (props) => {
+const Categories = () => {
+  const [category, setCategory] = useState(null);
+
+  useEffect(() => {
+    fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+      .then((res) => res.json())
+      .then((categoryData) => setCategory(categoryData))
+      .catch((error) => console.error("Fehler :-(", error));
+  }, []);
+
+  console.log(category);
   return (
     <>
       <section className="cat-section">
@@ -13,10 +24,16 @@ const Categories = (props) => {
           <SeeAll />
         </div>
         <div className="cat-card-container">
-          <div className="cat-card">
-            <img src={props.ImgURL} alt="category" />
-            <p>{props.Category}</p>
-          </div>
+          {category?.categories.length > 0 ? (
+            category?.categories.map((item, index) => (
+              <div className="cat-card" key={index}>
+                <img src={item.strCategoryThumb} alt="category IMG" />
+                <p>{item.strCategory}</p>
+              </div>
+            ))
+          ) : (
+            <p>Loading ...</p>
+          )}
         </div>
       </section>
     </>
