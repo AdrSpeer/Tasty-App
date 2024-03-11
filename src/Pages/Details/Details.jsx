@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "../../Components/Footer/Footer";
 import IngredientsInstruction from "../../Components/IngredientsInstruction/IngredientsInstruction";
 import "./Details.css";
+import { useParams } from "react-router-dom";
 const Details = () => {
   const [detailData, setDetailData] = useState([]);
   const [filterData, setFilterData] = useState([]);
@@ -11,14 +12,15 @@ const Details = () => {
       .then((res) => res.json())
       .then((data) => setDetailData(data.meals))
       .catch((err) => console.log("Fehler beim Laden der API", err));
-  }, [detailData]);
+  }, []);
 
   console.log(detailData);
-
   const { id } = useParams();
 
+  console.log(id);
+
   useEffect(() => {
-    const finder = detailData.find((item) => item.id === id);
+    const finder = detailData?.find((item) => Number(item.id) === Number(id));
     setFilterData(finder);
   }, [detailData]);
 

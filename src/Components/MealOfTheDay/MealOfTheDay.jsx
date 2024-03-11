@@ -22,19 +22,21 @@ const MealOfTheDay = () => {
         {randomMeal?.meals.length > 0 ? (
           randomMeal?.meals.map((item, index) => (
             <>
-              <h2>Meal of the Day</h2>
-              <article key={index} className="motd-card">
-                <div>
-                  <h2>{item.strMeal}</h2>
-                  <div className="motd-flex">
-                    <div className="motd-tag-container">
-                      <CircleIcon style={{ color: "#C4C4C4" }} />
-                      <p>{item.strCategory}</p>
+              <Link to={`/details/${item.idMeal}`}>
+                <h2>Meal of the Day</h2>
+                <article key={index} className="motd-card">
+                  <div>
+                    <h2>{item.strMeal}</h2>
+                    <div className="motd-flex">
+                      <div className="motd-tag-container">
+                        <CircleIcon style={{ color: "#C4C4C4" }} />
+                        <p>{item.strCategory}</p>
+                      </div>
+                      <p>{item.strArea}</p>
                     </div>
-                    <p>{item.strArea}</p>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             </>
           ))
         ) : (
