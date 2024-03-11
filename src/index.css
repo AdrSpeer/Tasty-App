@@ -10,12 +10,33 @@ a {
 }
 
 :root {
+  --fontsize-regular: 1rem;
   --title: #042628;
   --text: rgb(167, 167, 167);
   --btn: #042628;
+  --btn-text: #ffffff;
   --bg: #70b9be;
+  --gray: #f1f5f5;
 }
 
 img {
   max-width: 100%;
+}
+
+.button-tags {
+  font-size: var(--fontsize-regular);
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--gray);
+  padding: 0.6rem 1rem;
+}
+
+.button-tags:active {
+  color: var(--btn-text);
+  background-color: var(--bg);
+}
+
+.button-tags:hover {
+  color: var(--btn-text);
+  background-color: var(--bg);
 }

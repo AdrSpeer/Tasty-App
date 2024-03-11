@@ -12,9 +12,9 @@ const Areas = () => {
           <SeeAll />
         </div>
         <div className="areas-filter-buttons">
-          <button>American</button>
-          <button>British</button>
-          <button>Dutch</button>
+          <button className="button-tags">American</button>
+          <button className="button-tags">British</button>
+          <button className="button-tags">Dutch</button>
         </div>
       </section>
     </>
