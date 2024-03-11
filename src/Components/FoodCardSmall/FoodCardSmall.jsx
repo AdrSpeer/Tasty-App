@@ -25,8 +25,8 @@ const FoodCardSmall = () => {
     <div className="fcs-grid">
       {areas ? (
         areas.map((item, index) => (
-          <Link to={`/details/${item.idMeal}`}>
-            <section key={index} className="fcs-container">
+          <Link to={`/details/${item.idMeal}`} key={index}>
+            <section className="fcs-container">
               <div className="areas">
                 <div className="fcs-image">
                   <img src={item.strMealThumb} alt="Food-Image" />
