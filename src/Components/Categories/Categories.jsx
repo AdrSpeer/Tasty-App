@@ -28,7 +28,7 @@ const Categories = () => {
           {category?.categories.length > 0 ? (
             category?.categories.map((item, index) => (
               <div className="cat-card" key={index}>
-                <Link to="/">
+                <Link to={`/search/categories/${item.strCategory}`}>
                   <img src={item.strCategoryThumb} alt="category IMG" />
                   <p>{item.strCategory}</p>
                 </Link>
