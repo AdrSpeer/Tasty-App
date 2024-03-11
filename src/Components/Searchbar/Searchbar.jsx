@@ -40,11 +40,11 @@ const Searchbar = () => {
         <div className="suggestions">
           {searchData &&
             searchData.length > 0 &&
-            searchData
-              .slice(0, 5)
-              .map((meal) => (
-                <Link to={`/details/${meal.idMeal}`}>{meal.strMeal}</Link>
-              ))}
+            searchData.slice(0, 5).map((meal) => (
+              <Link key={meal.idMeal} to={`/details/${meal.idMeal}`}>
+                {meal.strMeal}
+              </Link>
+            ))}
         </div>
       </div>
     </section>
