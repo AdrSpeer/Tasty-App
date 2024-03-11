@@ -4,6 +4,7 @@ import SearchbarTwo from "../SearchbarTwo/SearchbarTwo";
 import { useEffect, useState } from "react";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Categories.css";
+import { Link } from "react-router-dom";
 const Categories = () => {
   const [category, setCategory] = useState(null);
 
@@ -27,8 +28,10 @@ const Categories = () => {
           {category?.categories.length > 0 ? (
             category?.categories.map((item, index) => (
               <div className="cat-card" key={index}>
-                <img src={item.strCategoryThumb} alt="category IMG" />
-                <p>{item.strCategory}</p>
+                <Link to="/">
+                  <img src={item.strCategoryThumb} alt="category IMG" />
+                  <p>{item.strCategory}</p>
+                </Link>
               </div>
             ))
           ) : (
