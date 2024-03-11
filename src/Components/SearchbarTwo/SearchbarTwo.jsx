@@ -12,7 +12,7 @@ const SearchbarTwo = (props) => {
 
   // ! Search Category
   useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchInput}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
       .then((res) => res.json())
       .then((data) => props.setSearchData(data.meals))
       .catch((err) => console.log("Fehler beim Laden der API", err));
