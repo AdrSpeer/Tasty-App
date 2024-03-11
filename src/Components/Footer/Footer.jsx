@@ -3,7 +3,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import PolicyIcon from '@mui/icons-material/Policy';
 import "./Footer.css";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <section className="footer-box">
