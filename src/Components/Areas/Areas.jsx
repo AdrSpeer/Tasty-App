@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 import SearchbarThree from "../SearchbarThree/SearchbarThree";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Areas.css";
 
 const Areas = () => {
+  const [area, setArea] = useState(null);
+
+  useEffect(() => {
+    fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
+      .then((res) => res.json())
+      .then((areaData) => setArea(areaData))
+      .catch((error) => console.error("Fehler :-(", error));
+  }, []);
+  console.log(area);
   return (
     <>
       <section className="areas-section">
@@ -12,9 +22,15 @@ const Areas = () => {
           <SeeAll />
         </div>
         <div className="areas-filter-buttons">
-          <button className="button-tags">American</button>
-          <button className="button-tags">British</button>
-          <button className="button-tags">Dutch</button>
+          {area?.meals.length > 0 ? (
+            area?.meals.map((item, index) => (
+              <button key={index} className="button-tags">
+                {item.strArea}
+              </button>
+            ))
+          ) : (
+            <p>Loading ...</p>
+          )}
         </div>
       </section>
     </>
