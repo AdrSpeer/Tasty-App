@@ -1,6 +1,5 @@
 // category = cat
 // <Categories ImgURL="https://picsum.photos/500/300/" Category="Beef" />
-import SearchbarTwo from "../SearchbarTwo/SearchbarTwo";
 import { useEffect, useState } from "react";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Categories.css";

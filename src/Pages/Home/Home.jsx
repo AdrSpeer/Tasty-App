@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
       <Searchbar />
-
       <MealOfTheDay />
       <Areas />
       <Categories />

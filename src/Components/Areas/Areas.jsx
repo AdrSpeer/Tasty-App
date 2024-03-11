@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import SearchbarThree from "../SearchbarThree/SearchbarThree";
 import SeeAll from "../SeeAll/SeeAll";
 import "./Areas.css";
 
