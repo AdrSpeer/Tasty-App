@@ -10,16 +10,15 @@
 }
 
 .cat-card-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   width: 100%;
+  padding: 2vh 4vw;
 }
 
 .cat-card {
   padding: 1rem;
-  width: 40vw;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(54, 54, 54, 0.25);
