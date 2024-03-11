@@ -5,6 +5,10 @@
   flex-direction: column;
   height: 100vh;
   background-color: var(--bg);
+  background-image: url(../../../public/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .loading-title {
@@ -16,8 +20,13 @@
 .loader {
   margin-top: 2vh;
   width: 10rem;
-  height: 0.8rem;
-  background: linear-gradient(#ffffff 0 0) 0/0% no-repeat #b6b6b6;
+  height: 0.5rem;
+  background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(201, 201, 201, 1) 100%
+    )
+    0/0% no-repeat #b6b6b6;
   animation: l1 1s infinite linear;
 }
 
