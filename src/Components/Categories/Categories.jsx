@@ -9,7 +9,7 @@ const Categories = (props) => {
       <section className="cat-section">
         <div className="cat-title-flex">
           <h2>Categories</h2>
-          <SearchbarTwo />
+
           <SeeAll />
         </div>
         <div className="cat-card-container">
