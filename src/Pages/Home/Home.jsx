@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Searchbar />
 
-      <MealOfTheDay MealTitle="Full English Breakfast" TagText="Breakfast" AreasText="British" />
+      <MealOfTheDay />
       <Areas />
       <Categories />
       <Footer />
