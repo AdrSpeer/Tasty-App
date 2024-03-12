@@ -1,6 +1,6 @@
 .footer-box {
   background-color: white;
-  position: sticky;
+  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
