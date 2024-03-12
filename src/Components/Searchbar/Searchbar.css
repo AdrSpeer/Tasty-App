@@ -7,20 +7,21 @@
 .searchbar-box {
   display: flex;
   align-items: center;
-  padding: 1.5vw;
-  border-radius: 10px;
+  padding: 0.8rem;
+  border-radius: 1rem;
   width: 90%;
-  -webkit-box-shadow: 0px 0px 7px 0px #000000;
-  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+  border: 2px solid #e6ebf2;
   cursor: pointer;
   position: relative;
-  margin-top: 2vh;
+  margin-top: 6vh;
+  margin-bottom: 1vh;
 }
 .searchbar-box input {
   border: none;
   outline: none;
   width: 90%;
   margin-left: 2vw;
+  font-size: var(--fontsize-regular);
 }
 
 .searchbar-box input::placeholder {
