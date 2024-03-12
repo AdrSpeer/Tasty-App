@@ -34,6 +34,7 @@ const Searchbar = () => {
           name="searchbar"
           type="text"
           value={searchInput}
+          autoComplete="off"
           onFocus={handleFocus}
           placeholder={placeholderVisible ? "Search" : ""}
         />
