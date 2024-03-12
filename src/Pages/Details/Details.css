@@ -92,6 +92,20 @@
   border-radius: 1rem;
 }
 
+.button-vid {
+  background-color: #70b9be;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 1.6vh;
+  margin-bottom: -3vh;
+  border-radius: 1rem;
+  white-space: pre-wrap;
+  border: none;
+  width: 92vw;
+}
+
 .ingredients p {
   font-size: 1.125rem;
   font-weight: 500;
