@@ -42,18 +42,18 @@ const CategoriesPage = () => {
         <div className="fcs-grid">
           {category ? (
             category.map((item, index) => (
-              <Link key={index} to={`/details/${item.idMeal}`}>
-                <section className="fcs-container">
-                  <div className="areas">
+              <section className="fcs-container">
+                <div className="areas">
+                  <Link key={index} to={`/details/${item.idMeal}`}>
                     <div className="fcs-image">
                       <img src={item.strMealThumb} alt="category IMG" />
                     </div>
                     <div className="fcs-name">
                       <p>{item.strMeal}</p>
                     </div>
-                  </div>
-                </section>
-              </Link>
+                  </Link>
+                </div>
+              </section>
             ))
           ) : (
             <p>Loading ...</p>

@@ -23,41 +23,41 @@ const Area = () => {
   }, []);
 
   return (
-      <section className="area-page">
-        <Searchbar />
-        <div className="areas-filter-buttons">
-          {mainAreaData?.meals ? (
-            mainAreaData?.meals.map((item, index) => (
-              <Link to={`/area/${item.strArea}`} key={index}>
-                <button className="button-tags">{item.strArea}</button>
-              </Link>
-            ))
-          ) : (
-            <p>Loading ...</p>
-          )}
-        </div>
-        <div className="fcs-grid">
-          {area ? (
-            area.map((item, index) => (
-              <Link key={index} to={`/details/${item.idMeal}`}>
-                <section className="fcs-container">
-                  <div className="areas">
-                    <div className="fcs-image">
-                      <img src={item.strMealThumb} alt="category IMG" />
-                    </div>
-                    <div className="fcs-name">
-                      <p>{item.strMeal}</p>
-                    </div>
+    <section className="area-page">
+      <Searchbar />
+      <div className="areas-filter-buttons">
+        {mainAreaData?.meals ? (
+          mainAreaData?.meals.map((item, index) => (
+            <Link to={`/area/${item.strArea}`} key={index}>
+              <button className="button-tags">{item.strArea}</button>
+            </Link>
+          ))
+        ) : (
+          <p>Loading ...</p>
+        )}
+      </div>
+      <div className="fcs-grid">
+        {area ? (
+          area.map((item, index) => (
+            <section className="fcs-container">
+              <div className="areas">
+                <Link key={index} to={`/details/${item.idMeal}`}>
+                  <div className="fcs-image">
+                    <img src={item.strMealThumb} alt="category IMG" />
                   </div>
-                </section>
-              </Link>
-            ))
-          ) : (
-            <p>Loading ...</p>
-          )}
-        </div>
-        <Footer />
-      </section>
+                  <div className="fcs-name">
+                    <p>{item.strMeal}</p>
+                  </div>
+                </Link>
+              </div>
+            </section>
+          ))
+        ) : (
+          <p>Loading ...</p>
+        )}
+      </div>
+      <Footer />
+    </section>
   );
 };
 
