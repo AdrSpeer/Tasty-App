@@ -23,7 +23,6 @@ const Area = () => {
   }, []);
 
   return (
-    <>
       <section className="area-page">
         <Searchbar />
         <div className="areas-filter-buttons">
@@ -59,7 +58,6 @@ const Area = () => {
         </div>
         <Footer />
       </section>
-    </>
   );
 };
 

@@ -9,14 +9,13 @@ const Search = () => {
   const [searchData, setSearchData] = useState([]);
 
   return (
-    <>
+    <section className="page-wrapper">
       <SearchbarTwo setSearchData={setSearchData}/>
       {searchData?.map((foodcard, key) => (
         <FoodCardLarge key={key} data={foodcard}/>
       ))}
-      
       <Footer />
-    </>
+    </section>
   );
 };
 
