@@ -9,6 +9,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: -10vh;
 }
 
 .loading-title {
@@ -27,7 +28,7 @@
       rgba(201, 201, 201, 1) 100%
     )
     0/0% no-repeat #b6b6b6;
-  animation: l1 1s infinite linear;
+  animation: l1 3s infinite linear;
 }
 
 @keyframes l1 {

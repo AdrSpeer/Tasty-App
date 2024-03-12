@@ -41,7 +41,7 @@ const Area = () => {
       <div className="fcs-grid">
         {area ? (
           area.map((item, index) => (
-            <section className="fcs-container">
+            <section className="fcs-container" key={index}>
               <div className="areas">
                 <Link key={index} to={`/details/${item.idMeal}`}>
                   <div className="fcs-image">

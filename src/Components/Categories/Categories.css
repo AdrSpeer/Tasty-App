@@ -1,6 +1,7 @@
 .cat-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8vh;
 }
 
 .cat-title-flex {
