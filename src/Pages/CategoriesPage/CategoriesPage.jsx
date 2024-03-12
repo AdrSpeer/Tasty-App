@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./CategoriesPage.css";
 import Searchbar from "../../Components/Searchbar/Searchbar";
+import Footer from "../../Components/Footer/Footer";
 
 const CategoriesPage = () => {
   const [category, setCategory] = useState([]);
@@ -59,6 +60,7 @@ const CategoriesPage = () => {
           )}
         </div>
       </section>
+      <Footer />
     </>
   );
 };

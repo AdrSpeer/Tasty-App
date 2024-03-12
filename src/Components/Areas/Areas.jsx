@@ -24,7 +24,7 @@ const Areas = () => {
           {area?.meals.length > 0 ? (
             area?.meals.map((item, index) => (
               <Link key={index} to={`/area/${item.strArea}`}>
-                <button className="button-tags">{item.strArea}</button>{" "}
+                <button className="button-tags">{item.strArea}</button>
               </Link>
             ))
           ) : (

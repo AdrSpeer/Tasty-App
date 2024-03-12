@@ -1,12 +1,18 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/Montserrat-VariableFont_wght.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter Variable";
+  font-family: Montserrat, "Inter Variable", Arial, Helvetica, sans-serif;
 }
 
 a {
   text-decoration: none;
+  font-size: 1rem;
 }
 
 :root {
@@ -17,6 +23,7 @@ a {
   --btn-text: #ffffff;
   --bg: #70b9be;
   --gray: #f1f5f5;
+  --instructions-gray: #48525f;
 }
 
 img {
@@ -24,12 +31,24 @@ img {
 }
 
 h1 {
+  font-size: 1.75rem;
   padding-bottom: 2vh;
 }
 
 h2 {
+  font-size: 1.5rem;
   padding-bottom: 0.5vh;
 }
+
+h3 {
+  font-size: 1.3rem;
+  padding-bottom: 0.5vh;
+}
+
+p {
+  font-size: var(--fontsize-regular);
+}
+
 .button-tags {
   font-size: var(--fontsize-regular);
   font-weight: 300;
