@@ -47,6 +47,21 @@ h3 {
 
 p {
   font-size: var(--fontsize-regular);
+  line-height: 145%;
+}
+
+.p-title {
+  font-weight: 500;
+}
+
+.p-subtitle {
+  font-weight: 300;
+}
+
+.p-subtitle,
+.p-title {
+  color: #748189;
+  line-height: 145%;
 }
 
 .button-tags {

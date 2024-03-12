@@ -1,7 +1,7 @@
 .footer-box {
   background-color: white;
   position: sticky;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   left: 0;
   display: flex;
