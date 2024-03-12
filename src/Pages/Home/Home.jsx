@@ -7,13 +7,13 @@ import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   return (
-    <>
-      <Searchbar />
-      <MealOfTheDay />
-      <Areas />
-      <Categories />
-      <Footer />
-    </>
+      <section className="home-wrap">
+        <Searchbar />
+        <MealOfTheDay />
+        <Areas />
+        <Categories />
+        <Footer />
+      </section>
   );
 };
 
