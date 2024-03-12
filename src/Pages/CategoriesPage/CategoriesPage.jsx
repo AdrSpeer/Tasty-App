@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import "./CategoriesPage.css";
 import Searchbar from "../../Components/Searchbar/Searchbar";
 import Footer from "../../Components/Footer/Footer";
+import BackHeader from "../../Components/BackHeader/BackHeader";
 
 const CategoriesPage = () => {
   const [category, setCategory] = useState([]);
@@ -26,6 +27,7 @@ const CategoriesPage = () => {
 
   return (
     <>
+      <BackHeader title="Search" />
       <Searchbar />
       <section className="categories-page">
         <div className="areas-filter-buttons">

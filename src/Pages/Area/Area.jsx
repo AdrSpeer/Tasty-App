@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Searchbar from "../../Components/Searchbar/Searchbar";
 import "./Area.css";
 import Footer from "../../Components/Footer/Footer";
+import BackHeader from "../../Components/BackHeader/BackHeader";
 const Area = () => {
   const [area, setArea] = useState([]);
   const [mainAreaData, setMainAreaData] = useState([]);
@@ -24,6 +25,7 @@ const Area = () => {
 
   return (
     <section className="area-page">
+      <BackHeader title="Search" />
       <Searchbar />
       <div className="areas-filter-buttons">
         {mainAreaData?.meals ? (
