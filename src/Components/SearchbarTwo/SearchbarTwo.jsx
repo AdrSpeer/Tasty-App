@@ -26,6 +26,7 @@ const SearchbarTwo = (props) => {
           onChange={(e) => setSearchInput(e.target.value)}
           name="searchbar"
           type="text"
+          autoComplete="off"
           value={searchInput}
           onFocus={handleFocus}
           placeholder={placeholderVisible ? "Search" : ""}
